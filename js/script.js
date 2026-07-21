@@ -1,3 +1,23 @@
+// =====================================================
+// PAGE LOADER
+// =====================================================
+window.addEventListener("load",()=>{
+
+    const loader = document.getElementById("loader");
+
+    if(loader){
+
+        loader.style.opacity = "0";
+
+        setTimeout(()=>{
+
+            loader.style.display="none";
+
+        },500);
+
+    }
+
+});
 /* =====================================================
    PORTFOLIO WEBSITE JAVASCRIPT
    Arya Mahendra Karade
@@ -26,16 +46,9 @@ if(menuBtn){
 document.querySelectorAll(".nav-links a")
 .forEach(link=>{
 
-
     link.addEventListener("click",()=>{
-
-
         navLinks.classList.remove("active");
-
-
     });
-
-
 });
 
 // =====================================================
@@ -68,220 +81,104 @@ window.addEventListener("scroll",()=>{
     navItems.forEach(link=>{
 
         link.classList.remove("active");
-
-
-
         if(
-
             link.getAttribute("href") === "#" + current
-
         ){
-
             link.classList.add("active");
-
         }
-
-
     });
-
-
 });
-
-
-
-
-
-
-
 
 // =====================================================
 // SCROLL REVEAL ANIMATION
 // =====================================================
 
-
 const revealElements = document.querySelectorAll(
     ".section, .project-card, .skill-box, .timeline-item, .service-card"
 );
 
-
-
 function revealOnScroll(){
-
-
-
     revealElements.forEach(element=>{
-
-
         const elementTop =
         element.getBoundingClientRect().top;
-
-
-
         const revealPoint = 120;
-
-
-
         if(elementTop < window.innerHeight - revealPoint){
-
-
-
             element.classList.add("show");
-
-
         }
-
-
-
     });
-
-
-
 }
-
-
 
 window.addEventListener(
     "scroll",
     revealOnScroll
 );
-
-
 revealOnScroll();
-
-
-
-
-
-
-
 
 // =====================================================
 // SCROLL PROGRESS BAR
 // =====================================================
-
-
 const progressBar =
 document.getElementById("progress-bar");
 
-
-
 window.addEventListener("scroll",()=>{
-
-
     if(progressBar){
-
-
         let scrollTop =
         document.documentElement.scrollTop;
-
-
 
         let scrollHeight =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
-
-
         let progress =
         (scrollTop / scrollHeight) * 100;
 
-
-
         progressBar.style.width =
         progress + "%";
-
-
     }
-
-
 });
-
-
-
-
-
-
-
 
 // =====================================================
 // BACK TO TOP BUTTON
 // =====================================================
-
-
 const backToTop =
 document.getElementById("backToTop");
 
-
-
 window.addEventListener("scroll",()=>{
-
 
     if(window.scrollY > 500){
 
-
         if(backToTop)
-
         backToTop.classList.add("show");
-
-
     }
-
     else{
-
-
         if(backToTop)
-
         backToTop.classList.remove("show");
-
-
     }
-
-
-
 });
 
-
-
-
-
 if(backToTop){
-
 
     backToTop.addEventListener(
         "click",
         ()=>{
 
-
             window.scrollTo({
-
 
                 top:0,
 
-
                 behavior:"smooth"
 
-
             });
-
 
         }
 
     );
 
-
 }
-
-
-
-
-
-
-
 
 // =====================================================
 // CONTACT FORM VALIDATION
 // =====================================================
-
 
 const contactForm =
 document.getElementById("contact-form");
