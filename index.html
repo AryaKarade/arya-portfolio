@@ -1,310 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arya | Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <title>Arya Mahendra Karade | Full Stack Developer</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Arya Mahendra Karade - Computer Engineering Student | Full Stack Web Developer | PHP | React | JavaScript">
+
+    <meta name="keywords"
+        content="Arya, Portfolio, PHP Developer, React Developer, Full Stack Developer">
+
+    <meta name="author" content="Arya Mahendra Karade">
+
+    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
-    <!-- Header / Navbar -->
-<header>
-    <nav>
-        <h1>Arya</h1>
-        <ul>
-            <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
-            <li><a href="#projects"><i class="fa-solid fa-code"></i> Projects</a></li>
-            <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-        </ul>
-    </nav>
-</header>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
+    <!-- ================= Loader ================= -->
 
-    <div class="hero-content">
+    <div id="loader">
 
-        <!-- Left Side -->
-        <div class="hero-text">
+        <div class="spinner"></div>
 
-            <span class="hero-greeting">
-                👋 Hello, I'm
-            </span>
+        <h2>Arya Portfolio</h2>
+
+    </div>
+
+    <!-- ================= Scroll Progress ================= -->
+
+    <div id="progress-bar"></div>
+
+    <!-- ================= Header ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                Arya<span>.</span>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#experience">Experience</a></li>
+
+                <li><a href="#education">Education</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#certificates">Certificates</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <div class="nav-icons">
+
+                <button id="theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <div class="menu-btn">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= Hero ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-left">
+
+            <p class="hello">
+
+                Hello, I'm
+
+            </p>
 
             <h1>
+
                 Arya Mahendra Karade
+
             </h1>
 
-            <h2>
-                <span id="typing"></span>
-            </h2>
+            <h3>
 
-            <p>
-                Passionate Computer Engineering student specializing in
-                Full Stack Web Development. I love building modern,
-                responsive, and user-friendly web applications that solve
-                real-world problems.
+                <span id="typing"></span>
+
+            </h3>
+
+            <p class="hero-desc">
+
+                Passionate Computer Engineering student focused on
+                Full Stack Development, responsive UI design,
+                backend development, and solving real-world problems
+                through clean and efficient code.
+
             </p>
 
             <div class="hero-buttons">
 
-                <a href="resume.pdf" download class="btn primary">
+                <a href="assets/resume.pdf" class="btn primary" download>
+
                     <i class="fa-solid fa-download"></i>
+
                     Download Resume
+
                 </a>
 
-                <a href="#contact" class="btn secondary">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    Contact Me
+                <a href="#projects" class="btn secondary">
+
+                    View Projects
+
                 </a>
 
             </div>
 
             <div class="social-links">
 
-                <a href="https://github.com/AryaKarade" target="_blank">
+                <a href="#">
+
                     <i class="fab fa-github"></i>
+
                 </a>
 
-                <a href="https://linkedin.com/in/arya-karade" target="_blank">
+                <a href="#">
+
                     <i class="fab fa-linkedin"></i>
+
                 </a>
 
-                <a href="mailto:karadearya05@email.com">
+                <a href="#">
+
                     <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-instagram"></i>
+
                 </a>
 
             </div>
 
         </div>
 
-        <!-- Right Side -->
+        <div class="hero-right">
 
-        <div class="hero-image">
+            <div class="profile-card">
 
-            <img src="images/profile.png" alt="Arya Mahendra Karade">
+                <img src="assets/images/profile.png" alt="Arya">
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- About Section starts here in Part 2 -->
 
-<!-- About Section -->
-<section id="about" class="reveal">
-    <h2>About Me</h2>
-    <p>
-        I am a Computer Engineering student passionate about building
-        clean and responsive web applications.
-    </p>
-
-    <h3>Skills</h3>
-    <div class="skills-container">
-
-    <div class="skill-box">
-        <h3>Frontend</h3>
-        <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-        </ul>
-    </div>
-
-    <div class="skill-box">
-        <h3>Backend</h3>
-        <ul>
-            <li>PHP</li>
-            <li>MySQL</li>
-            <li>REST APIs (Basics)</li>
-        </ul>
-    </div>
-
-    <div class="skill-box">
-        <h3>Frameworks</h3>
-        <ul>
-            <li>MVC</li>
-            <li>CodeIgniter</li>
-            <li>Laravel</li>
-            <li>React</li>
-        </ul>
-    </div>
-
-    <div class="skill-box">
-        <h3>Tools & Practices</h3>
-        <ul>
-            <li>Git & GitHub</li>
-            <li>VS Code</li>
-            <li>Problem Solving</li>
-        </ul>
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- Projects Section -->
-<section id="projects" class="reveal">
-    <h2>Projects</h2>
-
-    <div class="projects-container">
-
-        <!-- Portfolio Website -->
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-
-            <p class="project-problem">
-                <strong>Problem:</strong> Needed a professional way to showcase skills and projects online.
-            </p>
-
-            <p class="project-solution">
-                <strong>Solution:</strong> Designed and developed a responsive portfolio with clean UI and structured content.
-            </p>
-
-            <p class="project-tech">
-                <strong>Tech Used:</strong> HTML, CSS, Flexbox
-            </p>
-
-            <p class="project-learning">
-                <strong>What I Learned:</strong> Responsive layouts, design consistency, and user-focused structure.
-            </p>
-
-            <a href="https://arya-portfolio-phi.vercel.app/" class="project-link">View Details →</a>
-        </div>
-
-        <!-- CRUD Application -->
-        <div class="project-card">
-            <h3>CRUD Application</h3>
-
-            <p class="project-problem">
-                <strong>Problem:</strong> Manual record management was time-consuming and error-prone.
-            </p>
-
-            <p class="project-solution">
-                <strong>Solution:</strong> Built a web application to add, edit, delete, and display employee records efficiently.
-            </p>
-
-            <p class="project-tech">
-                <strong>Tech Used:</strong> PHP, MySQL, HTML, CSS
-            </p>
-
-            <p class="project-learning">
-                <strong>What I Learned:</strong> Database integration, CRUD operations, server-side scripting, and form handling.
-            </p>
-
-            <a href="https://technohacks-crud.vercel.app/" class="project-link">View Details →</a>
-        </div>
-
-        <!-- API Based App -->
-        <div class="project-card">
-            <h3>API Based App</h3>
-
-            <p class="project-problem">
-                <strong>Problem:</strong> Needed to fetch live data dynamically for better user experience.
-            </p>
-
-            <p class="project-solution">
-                <strong>Solution:</strong> Developed an app that consumes public APIs to display real-time information.
-            </p>
-
-            <p class="project-tech">
-                <strong>Tech Used:</strong> JavaScript, HTML, CSS, Fetch API
-            </p>
-
-            <p class="project-learning">
-                <strong>What I Learned:</strong> Asynchronous programming, API integration, and dynamic DOM manipulation.
-            </p>
-
-            <a href="#" class="project-link">View Details →</a>
-        </div>
-
-        <!-- Result Management System -->
-        <div class="project-card">
-            <h3>Result Management System</h3>
-
-            <p class="project-problem">
-                <strong>Problem:</strong> Managing student results manually was inefficient and prone to errors.
-            </p>
-
-            <p class="project-solution">
-                <strong>Solution:</strong> Developed a system to add, edit, search, and display student results with sorting and statistics.
-            </p>
-
-            <p class="project-tech">
-                <strong>Tech Used:</strong> PHP, MySQL, HTML, CSS, JavaScript
-            </p>
-
-            <p class="project-learning">
-                <strong>What I Learned:</strong> Full-stack development, database queries, result calculations, and dashboard UI design.
-            </p>
-
-            <a href="#" class="project-link">View Details →</a>
-        </div>
-
-        <!-- OTP Login System -->
-        <div class="project-card">
-            <h3>OTP Login System</h3>
-
-            <p class="project-problem">
-                <strong>Problem:</strong> Traditional login methods lacked security and ease of use.
-            </p>
-
-            <p class="project-solution">
-                <strong>Solution:</strong> Built a login system that sends OTP to user email for secure authentication.
-            </p>
-
-            <p class="project-tech">
-                <strong>Tech Used:</strong> PHP, MySQL, PHPMailer, HTML, CSS
-            </p>
-
-            <p class="project-learning">
-                <strong>What I Learned:</strong> Email integration, OTP generation, form validation, and secure authentication flow.
-            </p>
-
-            <a href="#" class="project-link">View Details →</a>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- Contact Section -->
-<section id="contact" class="reveal">
-    <h2>Contact Me</h2>
-
-    <p><i class="fa-solid fa-envelope"></i> arya@example.com</p>
-    <p><i class="fa-brands fa-linkedin"></i> linkedin.com/in/arya</p>
-    <p><i class="fa-brands fa-github"></i> github.com/arya</p>
-
-    <form id="contact-form">
-    <div class="form-group">
-        <input type="text" id="name" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-        <input type="email" id="email" placeholder="Your Email" required>
-    </div>
-    <div class="form-group">
-        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-    </div>
-    <button type="submit" class="btn primary">Send Message</button>
-    <p id="form-message"></p>
-</form>
-
-</section>
-
-
-<!-- Footer -->
-<footer>
-    <p>© 2026 Arya Mahendra Karade. All rights reserved.</p>
-</footer>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
