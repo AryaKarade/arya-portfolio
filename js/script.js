@@ -1,117 +1,433 @@
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav ul li a");
-const roles = [
-    "Computer Engineering Student",
-    "Full Stack Web Developer",
-    "PHP Developer",
-    "React Learner",
-    "AI Enthusiast"
-];
+/* =====================================================
+   PORTFOLIO WEBSITE JAVASCRIPT
+   Arya Mahendra Karade
+===================================================== */
+// =====================================================
+// MOBILE NAVBAR TOGGLE
+// =====================================================
 
-let roleIndex = 0;
-let charIndex = 0;
-let typing = true;
+const menuBtn = document.querySelector(".menu-btn");
 
-const typingElement = document.getElementById("typing");
+const navLinks = document.querySelector(".nav-links");
 
-function typeEffect() {
+if(menuBtn){
 
-    const currentRole = roles[roleIndex];
+    menuBtn.addEventListener("click",()=>{
 
-    if (typing) {
+        navLinks.classList.toggle("active");
 
-        typingElement.textContent = currentRole.substring(0, charIndex++);
+        menuBtn.classList.toggle("open");
 
-        if (charIndex > currentRole.length) {
+    });
 
-            typing = false;
-
-            setTimeout(typeEffect, 1500);
-
-            return;
-        }
-
-    } else {
-
-        typingElement.textContent = currentRole.substring(0, charIndex--);
-
-        if (charIndex < 0) {
-
-            typing = true;
-
-            roleIndex = (roleIndex + 1) % roles.length;
-
-        }
-
-    }
-
-    setTimeout(typeEffect, typing ? 100 : 50);
 }
 
-typeEffect();
+// Close mobile menu after clicking link
+document.querySelectorAll(".nav-links a")
+.forEach(link=>{
 
-window.addEventListener("scroll", () => {
+
+    link.addEventListener("click",()=>{
+
+
+        navLinks.classList.remove("active");
+
+
+    });
+
+
+});
+
+// =====================================================
+// ACTIVE NAVBAR LINK ON SCROLL
+// =====================================================
+
+const sections = document.querySelectorAll("section");
+
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll",()=>{
+
     let current = "";
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+    sections.forEach(section=>{
 
-        if (scrollY >= sectionTop - 100) {
+        const sectionTop = section.offsetTop - 150;
+
+        const sectionHeight = section.offsetHeight;
+
+        if(
+            scrollY >= sectionTop &&
+            scrollY < sectionTop + sectionHeight
+        ){
             current = section.getAttribute("id");
+
         }
     });
 
-    navLinks.forEach(link => {
+    navItems.forEach(link=>{
+
         link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
+
+
+
+        if(
+
+            link.getAttribute("href") === "#" + current
+
+        ){
+
             link.classList.add("active");
+
         }
+
+
     });
+
+
 });
-const reveals = document.querySelectorAll(".reveal");
 
-function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 120;
 
-    reveals.forEach(reveal => {
-        const revealTop = reveal.getBoundingClientRect().top;
 
-        if (revealTop < windowHeight - revealPoint) {
-            reveal.classList.add("active");
+
+
+
+
+
+// =====================================================
+// SCROLL REVEAL ANIMATION
+// =====================================================
+
+
+const revealElements = document.querySelectorAll(
+    ".section, .project-card, .skill-box, .timeline-item, .service-card"
+);
+
+
+
+function revealOnScroll(){
+
+
+
+    revealElements.forEach(element=>{
+
+
+        const elementTop =
+        element.getBoundingClientRect().top;
+
+
+
+        const revealPoint = 120;
+
+
+
+        if(elementTop < window.innerHeight - revealPoint){
+
+
+
+            element.classList.add("show");
+
+
         }
+
+
+
     });
+
+
+
 }
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll(); // trigger on load
-const form = document.getElementById("contact-form");
-const formMessage = document.getElementById("form-message");
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault(); // prevent default submission
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+window.addEventListener(
+    "scroll",
+    revealOnScroll
+);
 
-    if (!name || !email || !message) {
-        formMessage.textContent = "All fields are required!";
-        formMessage.style.color = "red";
-        return;
+
+revealOnScroll();
+
+
+
+
+
+
+
+
+// =====================================================
+// SCROLL PROGRESS BAR
+// =====================================================
+
+
+const progressBar =
+document.getElementById("progress-bar");
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+    if(progressBar){
+
+
+        let scrollTop =
+        document.documentElement.scrollTop;
+
+
+
+        let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+
+
+        let progress =
+        (scrollTop / scrollHeight) * 100;
+
+
+
+        progressBar.style.width =
+        progress + "%";
+
+
     }
 
-    // Basic email pattern check
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (!email.match(emailPattern)) {
-        formMessage.textContent = "Enter a valid email!";
-        formMessage.style.color = "red";
-        return;
-    }
 
-    formMessage.textContent = "Message sent successfully!";
-    formMessage.style.color = "green";
-
-    form.reset(); // clear form
 });
+
+
+
+
+
+
+
+
+// =====================================================
+// BACK TO TOP BUTTON
+// =====================================================
+
+
+const backToTop =
+document.getElementById("backToTop");
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+    if(window.scrollY > 500){
+
+
+        if(backToTop)
+
+        backToTop.classList.add("show");
+
+
+    }
+
+    else{
+
+
+        if(backToTop)
+
+        backToTop.classList.remove("show");
+
+
+    }
+
+
+
+});
+
+
+
+
+
+if(backToTop){
+
+
+    backToTop.addEventListener(
+        "click",
+        ()=>{
+
+
+            window.scrollTo({
+
+
+                top:0,
+
+
+                behavior:"smooth"
+
+
+            });
+
+
+        }
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+// =====================================================
+// CONTACT FORM VALIDATION
+// =====================================================
+
+
+const contactForm =
+document.getElementById("contact-form");
+
+
+
+
+if(contactForm){
+
+
+contactForm.addEventListener(
+"submit",
+(e)=>{
+
+
+    e.preventDefault();
+
+
+
+    const inputs =
+    contactForm.querySelectorAll(
+        "input, textarea"
+    );
+
+
+
+    let valid = true;
+
+
+
+    inputs.forEach(input=>{
+
+
+        if(input.value.trim()===""){
+
+
+            valid=false;
+
+
+            input.style.borderColor="red";
+
+
+        }
+
+        else{
+
+
+            input.style.borderColor="";
+
+
+        }
+
+
+
+    });
+
+
+
+
+
+    if(valid){
+
+
+        alert(
+        "Thank you! Your message has been sent successfully."
+        );
+
+
+
+        contactForm.reset();
+
+
+
+    }
+
+    else{
+
+
+        alert(
+        "Please fill all required fields."
+        );
+
+
+    }
+
+
+
+
+
+});
+
+}
+
+
+
+
+
+
+
+
+// =====================================================
+// IMAGE LAZY LOADING
+// =====================================================
+
+
+const images =
+document.querySelectorAll("img");
+
+
+
+images.forEach(img=>{
+
+
+    img.loading="lazy";
+
+
+});
+
+
+
+
+
+
+
+
+// =====================================================
+// CURRENT YEAR AUTOMATIC UPDATE
+// =====================================================
+
+
+const year =
+document.querySelector(".copyright");
+
+
+
+if(year){
+
+
+    const currentYear =
+    new Date().getFullYear();
+
+
+
+    year.innerHTML =
+    `© ${currentYear} Arya Mahendra Karade.
+    All Rights Reserved.`;
+
+
+}
