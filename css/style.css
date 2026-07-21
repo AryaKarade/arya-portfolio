@@ -4,12 +4,9 @@
    Main Style Sheet - Part 1
 ===================================================== */
 
-
 /* =====================================================
    GOOGLE RESET
 ===================================================== */
-
-
 * {
 
     margin: 0;
@@ -22,15 +19,9 @@
 
 }
 
-
-
 html {
-
     overflow-x: hidden;
-
 }
-
-
 
 body {
 
@@ -46,8 +37,6 @@ body {
 
 }
 
-
-
 a {
 
     text-decoration: none;
@@ -56,15 +45,11 @@ a {
 
 }
 
-
-
 ul {
 
     list-style: none;
 
 }
-
-
 
 img {
 
@@ -74,65 +59,43 @@ img {
 
 }
 
-
-
-
-
-
 /* =====================================================
    COLOR VARIABLES
 ===================================================== */
-
-
 :root {
-
 
     --primary:
 
     #2563eb;
 
-
     --secondary:
 
     #06b6d4;
-
 
     --background:
 
     #f8fafc;
 
-
     --card-bg:
 
     #ffffff;
-
 
     --text-color:
 
     #0f172a;
 
-
     --paragraph:
 
     #64748b;
-
 
     --border:
 
     rgba(0,0,0,0.08);
 
-
     --shadow:
 
     0 10px 30px rgba(0,0,0,0.08);
-
-
 }
-
-
-
-
-
 
 /* =====================================================
    DARK MODE VARIABLES
@@ -140,55 +103,39 @@ img {
    Activated by body.dark-mode
 ===================================================== */
 
-
 body.dark-mode {
-
 
     --background:
 
     #020617;
 
-
     --card-bg:
 
     #0f172a;
-
 
     --text-color:
 
     #f8fafc;
 
-
     --paragraph:
 
     #cbd5e1;
-
 
     --border:
 
     rgba(255,255,255,0.1);
 
-
     --shadow:
 
     0 10px 30px rgba(0,0,0,0.5);
 
-
 }
-
-
-
-
-
-
 
 /* =====================================================
    LOADER
 ===================================================== */
 
-
 #loader {
-
 
     position: fixed;
 
@@ -214,24 +161,15 @@ body.dark-mode {
 
     transition:0.5s ease;
 
-
 }
 
-
-
 #loader h2 {
-
-
     color:var(--primary);
 
     font-size:28px;
-
 }
 
-
-
 .loader-circle {
-
 
     height:70px;
 
@@ -251,38 +189,23 @@ body.dark-mode {
 
     spin 1s linear infinite;
 
-
 }
-
-
 
 @keyframes spin {
 
-
     100% {
-
 
         transform:rotate(360deg);
 
-
     }
 
-
 }
-
-
-
-
-
-
 
 /* =====================================================
    SCROLL PROGRESS BAR
 ===================================================== */
 
-
 #progress-bar {
-
 
     position:fixed;
 
@@ -308,14 +231,7 @@ body.dark-mode {
 
     z-index:9999;
 
-
 }
-
-
-
-
-
-
 
 /* =====================================================
    HEADER / NAVBAR
@@ -335,8 +251,6 @@ header {
 
 
 }
-
-
 
 .navbar {
 
@@ -382,8 +296,6 @@ header {
 }
 
 
-
-
 body.dark-mode .navbar {
 
 
@@ -393,12 +305,6 @@ body.dark-mode .navbar {
 
 
 }
-
-
-
-
-
-
 
 /* LOGO */
 
@@ -417,8 +323,6 @@ body.dark-mode .navbar {
 
 }
 
-
-
 .logo span {
 
 
@@ -428,12 +332,6 @@ body.dark-mode .navbar {
 
 
 }
-
-
-
-
-
-
 
 /* NAV LINKS */
 
@@ -447,8 +345,6 @@ body.dark-mode .navbar {
 
 
 }
-
-
 
 .nav-links li a {
 
@@ -466,8 +362,6 @@ body.dark-mode .navbar {
 
 }
 
-
-
 .nav-links li a:hover,
 
 .nav-links li a.active {
@@ -479,12 +373,6 @@ body.dark-mode .navbar {
 
 
 }
-
-
-
-
-
-
 
 /* NAV BUTTONS */
 
@@ -500,7 +388,6 @@ body.dark-mode .navbar {
 
 
 }
-
 
 
 .nav-right button {
@@ -529,8 +416,6 @@ body.dark-mode .navbar {
 
 }
 
-
-
 .menu-btn {
 
 
@@ -538,12 +423,6 @@ body.dark-mode .navbar {
 
 
 }
-
-
-
-
-
-
 
 /* =====================================================
    COMMON BUTTON DESIGN
@@ -3410,7 +3289,6 @@ body.dark-mode .tech-stack span {
 }
 
 
-
 ::-webkit-scrollbar-track {
 
 
@@ -3420,8 +3298,6 @@ body.dark-mode .tech-stack span {
 
 
 }
-
-
 
 ::-webkit-scrollbar-thumb {
 
@@ -3438,18 +3314,13 @@ body.dark-mode .tech-stack span {
 
 }
 
-
-
 ::-webkit-scrollbar-thumb:hover {
-
 
     background:
 
     var(--secondary);
 
-
 }
-
 body,
 header,
 section,
