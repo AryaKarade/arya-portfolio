@@ -1,5 +1,54 @@
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a");
+const roles = [
+    "Computer Engineering Student",
+    "Full Stack Web Developer",
+    "PHP Developer",
+    "React Learner",
+    "AI Enthusiast"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let typing = true;
+
+const typingElement = document.getElementById("typing");
+
+function typeEffect() {
+
+    const currentRole = roles[roleIndex];
+
+    if (typing) {
+
+        typingElement.textContent = currentRole.substring(0, charIndex++);
+
+        if (charIndex > currentRole.length) {
+
+            typing = false;
+
+            setTimeout(typeEffect, 1500);
+
+            return;
+        }
+
+    } else {
+
+        typingElement.textContent = currentRole.substring(0, charIndex--);
+
+        if (charIndex < 0) {
+
+            typing = true;
+
+            roleIndex = (roleIndex + 1) % roles.length;
+
+        }
+
+    }
+
+    setTimeout(typeEffect, typing ? 100 : 50);
+}
+
+typeEffect();
 
 window.addEventListener("scroll", () => {
     let current = "";
