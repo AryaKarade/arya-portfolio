@@ -2,74 +2,101 @@
 <html lang="en">
 
 <head>
-
+    <!-- ==========================================
+         BASIC META TAGS
+    =========================================== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- ==========================================
+         SEO
+    =========================================== -->
     <title>Arya Mahendra Karade | Full Stack Developer</title>
 
-    <!-- SEO -->
     <meta name="description"
-        content="Arya Mahendra Karade - Computer Engineering Student | Full Stack Web Developer | PHP | React | JavaScript">
+        content="Arya Mahendra Karade - Computer Engineering Student, Full Stack Web Developer, PHP Developer, React Developer and AI Enthusiast.">
 
     <meta name="keywords"
-        content="Arya, Portfolio, PHP Developer, React Developer, Full Stack Developer">
+        content="Arya Mahendra Karade, Portfolio, Full Stack Developer, PHP Developer, React Developer, Web Developer">
 
     <meta name="author" content="Arya Mahendra Karade">
 
-    <!-- Google Fonts -->
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- ==========================================
+         GOOGLE FONTS
+    =========================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <!-- ==========================================
+         FONT AWESOME
+    =========================================== -->
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- CSS -->
+    <!-- ==========================================
+         CSS FILES
+    =========================================== -->
 
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/animations.css">
 
 </head>
 
 <body>
 
-    <!-- ================= Loader ================= -->
+    <!-- ==========================================
+            LOADER
+    =========================================== -->
 
     <div id="loader">
 
-        <div class="spinner"></div>
+        <div class="loader-circle"></div>
 
         <h2>Arya Portfolio</h2>
 
     </div>
 
-    <!-- ================= Scroll Progress ================= -->
+    <!-- ==========================================
+            SCROLL PROGRESS BAR
+    =========================================== -->
 
     <div id="progress-bar"></div>
 
-    <!-- ================= Header ================= -->
+    <!-- ==========================================
+            HEADER
+    =========================================== -->
 
-    <header>
+    <header id="header">
 
         <nav class="navbar">
 
-            <div class="logo">
+            <!-- Logo -->
+
+            <a href="#" class="logo">
 
                 Arya<span>.</span>
 
-            </div>
+            </a>
+
+            <!-- Desktop Menu -->
 
             <ul class="nav-links">
 
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
 
                 <li><a href="#about">About</a></li>
 
@@ -87,7 +114,11 @@
 
             </ul>
 
-            <div class="nav-icons">
+            <!-- Right Side -->
+
+            <div class="nav-right">
+
+                <!-- Dark Mode -->
 
                 <button id="theme-toggle">
 
@@ -95,11 +126,13 @@
 
                 </button>
 
-                <div class="menu-btn">
+                <!-- Mobile Menu -->
+
+                <button class="menu-btn">
 
                     <i class="fa-solid fa-bars"></i>
 
-                </div>
+                </button>
 
             </div>
 
@@ -107,17 +140,27 @@
 
     </header>
 
-    <!-- ================= Hero ================= -->
+    <!-- ==========================================
+              HERO SECTION
+    =========================================== -->
 
     <section id="home" class="hero">
 
-        <div class="hero-left">
+        <!-- LEFT SIDE -->
 
-            <p class="hello">
+        <div class="hero-content">
+
+            <p class="hero-tag">
+
+                👋 Welcome To My Portfolio
+
+            </p>
+
+            <h3>
 
                 Hello, I'm
 
-            </p>
+            </h3>
 
             <h1>
 
@@ -125,24 +168,28 @@
 
             </h1>
 
-            <h3>
+            <h2>
 
                 <span id="typing"></span>
 
-            </h3>
+            </h2>
 
-            <p class="hero-desc">
+            <p class="hero-description">
 
-                Passionate Computer Engineering student focused on
-                Full Stack Development, responsive UI design,
-                backend development, and solving real-world problems
-                through clean and efficient code.
+                I'm a Computer Engineering student passionate about
+                Full Stack Web Development, UI Design,
+                PHP Development, React Applications and AI.
+
+                I love building modern, responsive and scalable web
+                applications that solve real-world problems.
 
             </p>
 
+            <!-- Buttons -->
+
             <div class="hero-buttons">
 
-                <a href="assets/resume.pdf" class="btn primary" download>
+                <a href="assets/resume.pdf" download class="btn primary-btn">
 
                     <i class="fa-solid fa-download"></i>
 
@@ -150,7 +197,7 @@
 
                 </a>
 
-                <a href="#projects" class="btn secondary">
+                <a href="#projects" class="btn secondary-btn">
 
                     View Projects
 
@@ -158,27 +205,29 @@
 
             </div>
 
-            <div class="social-links">
+            <!-- Social -->
 
-                <a href="#">
+            <div class="social-icons">
+
+                <a href="https://github.com/YOUR_USERNAME" target="_blank">
 
                     <i class="fab fa-github"></i>
 
                 </a>
 
-                <a href="#">
+                <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank">
 
                     <i class="fab fa-linkedin"></i>
 
                 </a>
 
-                <a href="#">
+                <a href="mailto:YOUR_EMAIL@gmail.com">
 
                     <i class="fa-solid fa-envelope"></i>
 
                 </a>
 
-                <a href="#">
+                <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
 
                     <i class="fab fa-instagram"></i>
 
@@ -188,11 +237,34 @@
 
         </div>
 
-        <div class="hero-right">
+        <!-- RIGHT SIDE -->
 
-            <div class="profile-card">
+        <div class="hero-image">
 
-                <img src="assets/images/profile.png" alt="Arya">
+            <div class="image-box">
+
+                <img src="assets/images/profile.png"
+                    alt="Arya Mahendra Karade">
+
+            </div>
+
+            <!-- Floating Cards -->
+
+            <div class="floating-card card-1">
+
+                💻 Full Stack Developer
+
+            </div>
+
+            <div class="floating-card card-2">
+
+                🚀 Open To Internship
+
+            </div>
+
+            <div class="floating-card card-3">
+
+                📍 Maharashtra, India
 
             </div>
 
@@ -200,9 +272,26 @@
 
     </section>
 
-    <!-- About Section starts here in Part 2 -->
+    <!-- ==========================================
+          ABOUT SECTION STARTS HERE
+          (PART 2)
+    =========================================== -->
+
+
+
+
+
+    <!-- ==========================================
+          JAVASCRIPT FILES
+    =========================================== -->
 
     <script src="js/script.js"></script>
+
+    <script src="js/typing.js"></script>
+
+    <script src="js/darkmode.js"></script>
+
+    <script src="js/counter.js"></script>
 
 </body>
 
