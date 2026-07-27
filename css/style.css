@@ -3334,3 +3334,189 @@ footer {
     color 0.4s ease;
 
 }
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+/* ---------- Tablets (992px) ---------- */
+
+@media (max-width: 992px) {
+
+    .hero,
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-container,
+    .projects-container,
+    .certificate-container,
+    .services-container,
+    .achievement-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-buttons,
+    .social-icons {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .image-box {
+        width: 350px;
+        height: 350px;
+    }
+
+    /* Timeline */
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px;
+        padding-right: 20px;
+        text-align: left !important;
+    }
+
+    .timeline-dot {
+        left: 12px !important;
+        right: auto;
+    }
+
+}
+
+
+/* ---------- Mobile (768px) ---------- */
+
+@media (max-width:768px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content h2 {
+        font-size: 22px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .stats,
+    .skills-container,
+    .projects-container,
+    .certificate-container,
+    .services-container,
+    .achievement-container {
+        grid-template-columns: 1fr;
+    }
+
+    .image-box {
+        width: 280px;
+        height: 280px;
+    }
+
+    .about-image img {
+        width: 250px;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+    }
+
+    .project-btn {
+        text-align: center;
+    }
+
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+/* ---------- Small Phones (480px) ---------- */
+
+@media (max-width:480px) {
+
+    .section {
+        width: 95%;
+        padding: 70px 0;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .image-box {
+        width: 220px;
+        height: 220px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .stat-card,
+    .skill-box,
+    .project-card,
+    .service-card,
+    .certificate-card,
+    .achievement-card {
+        padding: 20px;
+    }
+
+}
